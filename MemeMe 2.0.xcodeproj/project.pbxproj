@@ -13,6 +13,9 @@
 		0A1F3EE41DB0336A00D3E553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A1F3EE31DB0336A00D3E553 /* Assets.xcassets */; };
 		0A1F3EE71DB0336A00D3E553 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1F3EE51DB0336A00D3E553 /* LaunchScreen.storyboard */; };
 		0A1F3EEF1DB178CB00D3E553 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F3EEE1DB178CB00D3E553 /* Meme.swift */; };
+		0A25A4921DC4078C0087D9A9 /* SentMemesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25A4911DC4078C0087D9A9 /* SentMemesCollectionViewController.swift */; };
+		0A25A4941DC407FA0087D9A9 /* SentMemesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25A4931DC407FA0087D9A9 /* SentMemesCollectionViewCell.swift */; };
+		0A25A4961DC40AED0087D9A9 /* SentMemesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25A4951DC40AED0087D9A9 /* SentMemesDetailViewController.swift */; };
 		0AE8427B1DC18F36000B70E8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A1F3EE81DB0336A00D3E553 /* Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 		0A1F3EE61DB0336A00D3E553 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A1F3EE81DB0336A00D3E553 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A1F3EEE1DB178CB00D3E553 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		0A25A4911DC4078C0087D9A9 /* SentMemesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMemesCollectionViewController.swift; sourceTree = "<group>"; };
+		0A25A4931DC407FA0087D9A9 /* SentMemesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMemesCollectionViewCell.swift; sourceTree = "<group>"; };
+		0A25A4951DC40AED0087D9A9 /* SentMemesDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMemesDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				0A1F3EDC1DB0336A00D3E553 /* AppDelegate.swift */,
 				0A1F3EDE1DB0336A00D3E553 /* MemeEditorViewController.swift */,
 				0A1F3EEE1DB178CB00D3E553 /* Meme.swift */,
+				0A25A4911DC4078C0087D9A9 /* SentMemesCollectionViewController.swift */,
+				0A25A4931DC407FA0087D9A9 /* SentMemesCollectionViewCell.swift */,
+				0A25A4951DC40AED0087D9A9 /* SentMemesDetailViewController.swift */,
 				0A1F3EE01DB0336A00D3E553 /* Main.storyboard */,
 				0A1F3EE31DB0336A00D3E553 /* Assets.xcassets */,
 				0A1F3EE51DB0336A00D3E553 /* LaunchScreen.storyboard */,
@@ -100,7 +109,7 @@
 				TargetAttributes = {
 					0A1F3ED81DB0336A00D3E553 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 67V45KLZP6;
+						DevelopmentTeam = K9T59C7GGA;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -142,8 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A25A4961DC40AED0087D9A9 /* SentMemesDetailViewController.swift in Sources */,
+				0A25A4941DC407FA0087D9A9 /* SentMemesCollectionViewCell.swift in Sources */,
 				0A1F3EEF1DB178CB00D3E553 /* Meme.swift in Sources */,
 				0A1F3EDF1DB0336A00D3E553 /* MemeEditorViewController.swift in Sources */,
+				0A25A4921DC4078C0087D9A9 /* SentMemesCollectionViewController.swift in Sources */,
 				0A1F3EDD1DB0336A00D3E553 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +278,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 67V45KLZP6;
+				DEVELOPMENT_TEAM = K9T59C7GGA;
 				INFOPLIST_FILE = "MemeMe 2.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.peterkhotpanya.MemeMe-2-0";
@@ -280,7 +292,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 67V45KLZP6;
+				DEVELOPMENT_TEAM = K9T59C7GGA;
 				INFOPLIST_FILE = "MemeMe 2.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.peterkhotpanya.MemeMe-2-0";

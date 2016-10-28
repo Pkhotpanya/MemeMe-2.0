@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MemeEditorViewController.swift
 //  MemeMe 2.0
 //
 //  Created by Peter Khotpanya on 10/13/16.
@@ -157,8 +157,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: memeImageView.image!, memeImage: currentMemeImage)
         
         // Add it to the memes array in the Application Delegate
-        (UIApplication.shared.delegate as!
-            AppDelegate).memes.append(meme)
+        (UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
     }
     
     // Create a UIImage that combines the Image View and the Textfields
