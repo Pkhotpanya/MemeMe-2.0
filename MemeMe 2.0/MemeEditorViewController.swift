@@ -70,6 +70,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
             (activityType, completion, returnedItems, error) in
             if completion {
                 self.saveMeme()
+                self.dismiss(animated: true, completion: nil)
             }
         }
         
@@ -77,6 +78,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
     @IBAction func cancelButtonPressed(_ sender: AnyObject) {
         clearMemeEditor()
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func cameraButtonPressed(_ sender: AnyObject) {
         presentPicker(sourceType: .camera)

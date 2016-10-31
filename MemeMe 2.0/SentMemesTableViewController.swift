@@ -10,9 +10,7 @@ import UIKit
 
 class SentMemesTableViewController: UITableViewController {
     
-    var memes: [Meme] {
-        return (UIApplication.shared.delegate as! AppDelegate).memes
-    }
+    var memes: [Meme]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +20,13 @@ class SentMemesTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        memes = appDelegate.memes
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +38,7 @@ class SentMemesTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,22 +52,13 @@ class SentMemesTableViewController: UITableViewController {
 
         // Configure the cell...
         let meme = memes[indexPath.item]
-        let imageView = UIImageView(image: meme.memeImage)
-        cell.sentMemesImageView = imageView
+        cell.sentMemesImageView.image = meme.memeImage
         cell.sentMemesLabel.text = meme.topText + " " + meme.bottomText
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Grab the DetailVC from Storyboard
-        let object: AnyObject = self.storyboard!.instantiateViewController(withIdentifier: "SentMemesDetailViewController")
-        let detailVC = object as! SentMemesDetailViewController
-        
-        //Populate view controller with data from the selected item
-        detailVC.sentMemesImageView = UIImageView(image: self.memes[indexPath.row].memeImage)
-        
-        // Present the view controller using navigation
-        navigationController!.pushViewController(detailVC, animated: true)
+ 
     }
 
     /*
@@ -100,14 +96,26 @@ class SentMemesTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if  segue.identifier == "sentMemesDetailViewSegue" {
+            if let destination = segue.destination as? SentMemesDetailViewController{
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    let meme = memes[indexPath.item]
+                    destination.memeImage = meme.memeImage
+                }
+            }
+  
+        } else if segue.identifier == "memeEditorViewSegue" {
+            
+        }
     }
-    */
+    
 
 }

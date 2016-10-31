@@ -10,12 +10,12 @@ import UIKit
 
 class SentMemesDetailViewController: UIViewController {
     
-    @IBOutlet weak var sentMemesImageView: UIImageView!
+    @IBOutlet weak var sentMemesImageView: UIImageView?
+    weak var memeImage: UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        sentMemesImageView?.image = memeImage
     }
 
     override func didReceiveMemoryWarning() {
