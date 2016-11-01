@@ -21,9 +21,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>This application accesses your camera in order to take new photos to create a meme.</string>
+	<string></string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This application accesses your photo library to allow you create a meme from your photos.</string>
+	<string></string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
